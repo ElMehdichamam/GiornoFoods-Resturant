@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.s1{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/test.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+}
+.card{
+    cursor: pointer;
+    transition: all .4s;
+}
+.card:hover{
+    transform: scale(1.1);
+    box-shadow: 3px 1px 5px rgba(3, 5, 3, 0.685);
+    z-index: 1000;
+}
+.card-title{
+  font-family: "Playfair", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+.card-text{
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.test{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(122, 111, 97, 0.479);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading{
+  font-family: "Playfair", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}

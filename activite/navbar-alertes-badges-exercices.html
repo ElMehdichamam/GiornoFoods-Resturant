@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercices Bootstrap - Navigation, Alertes et Badges</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .demo-section {
+            background-color: white;
+            margin-bottom: 30px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .section-title {
+            color: #6610f2;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #6610f2;
+        }
+        
+        .exercise-title {
+            color: #495057;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .todo-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+        
+        .todo-box code {
+            background-color: #fff;
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: #d63384;
+        }
+        
+        .spacer {
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center; color: white; margin-bottom: 30px;">
+            Exercices Bootstrap - Navigation, Alertes et Badges
+        </h1>
+        
+        <!-- ========== SECTION 1 : NAVBAR DE BASE ========== -->
+        <div class="demo-section">
+            <h2 class="section-title">1. Barres de Navigation (Navbar)</h2>
+            
+            <!-- Exercice 1.1 : Navbar de base -->
+            <h3 class="exercise-title">Exercice 1.1 : Navbar de base claire</h3>
+            <div class="todo-box">
+                <strong>TODO:</strong> Créer une navbar de base<br>
+                Sur le <code>&lt;nav&gt;</code> : ajouter <code>navbar navbar-expand-lg navbar-light bg-light</code><br>
+                Sur le <code>&lt;div&gt;</code> : ajouter <code>container-fluid</code><br>
+                Sur le <code>&lt;a&gt;</code> : ajouter <code>navbar-brand</code>
+            </div>
+            
+            <!-- TODO: Ajouter les classes Bootstrap appropriées -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a href="#" class="navbar-brand">TechShop</a>
+                </div>
+            </nav>
+            
+            <!-- Exercice 1.2 : Navbar sombre -->
+            <h3 class="exercise-title">Exercice 1.2 : Navbar sombre</h3>
+            <div class="todo-box">
+                <strong>TODO:</strong> Créer une navbar avec fond sombre<br>
+                Classes : <code>navbar navbar-expand-lg navbar-dark bg-dark</code>
+            </div>
+            
+            <div class="spacer"></div>
+            
+            <!-- TODO: Ajouter les classes Bootstrap appropriées -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div>
+                    <a href="#">Site Sombre</a>
+                </div>
+            </nav>
+            
+            <!-- Exercice 1.3 : Navbar avec couleur primaire -->
+            <h3 class="exercise-title">Exercice 1.3 : Navbar bleue (primary)</h3>
+            <div class="todo-box">
+                <strong>TODO:</strong> Créer une navbar bleue<br>
+                Classes : <code>navbar navbar-expand-lg navbar-dark bg-primary</code>
+            </div>
+            
+            <div class="spacer"></div>
+            
+            <!-- TODO: Ajouter les classes Bootstrap appropriées -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <div>
+                    <a href="#">Mon Application</a>
+                </div>
+            </nav>
+        </div>
+        
+        <!-- ========== SECTION 2 : NAVBAR AVEC LIENS ========== -->
+        <div class="demo-section">
+            <h2 class="section-title">2. Navbar avec Liens de Navigation</h2>
+            
+            <h3 class="exercise-title">Exercice 2.1 : Ajouter des liens à la navbar</h3>
+            <div class="todo-box">
+                <strong>TODO:</strong> Ajouter les classes pour les liens<br>
+                Sur <code>&lt;ul&gt;</code> : <code>navbar-nav</code><br>
+                Sur chaque <code>&lt;li&gt;</code> : <code>nav-item</code><br>
+                Sur chaque <code>&lt;a&gt;</code> : <code>nav-link</code><br>
+                Sur le premier lien : ajouter aussi <code>active</code> pour indiquer la page actuelle<br>
+                Sur le dernier lien : ajouter aussi <code>disabled</code> pour le désactiver
+            </div>
+            
+            <!-- TODO: Ajouter les classes Bootstrap appropriées -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-light">
+                <div class="container-fluid">
+                    <a href="#" class="nav-link">Portfolio</a>
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a href="#" class="nav-link active">Accueil</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Projets</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">À propos</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link disabled">Admin</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        
+        <!-- ========== SECTION 3 : NAVBAR RESPONSIVE ========== -->
+        <div class="demo-section">
+            <h2 class="section-title">3. Navbar Responsive avec Bouton Hamburger</h2>
+            
+            <h3 class="exercise-title">Exercice 3.1 : Navbar qui se transforme en hamburger sur mobile</h3>
+            <div class="todo-box">
+                <strong>TODO:</strong> Rendre la navbar responsive<br>
+                1. Sur <code>&lt;nav&gt;</code> : <code>navbar navbar-expand-lg navbar-dark bg-success</code><br>
+                2. Sur le div conteneur : <code>container-fluid</code><br>
+                3. Sur <code>&lt;a&gt;</code> brand : <code>navbar-brand</code><br>
+                4. Sur <code>&lt;button&gt;</code> : <code>navbar-toggler</code> + attributs <code>data-bs-toggle="collapse"</code> et <code>data-bs-target="#navbarResponsive"</code><br>
+                5. Sur <code>&lt;span&gt;</code> dans le bouton : <code>navbar-toggler-icon</code><br>
+                6. Sur le div des liens : <code>collapse navbar-collapse</code> + <code>id="navbarResponsive"</code><br>
+                7. Sur <code>&lt;ul&gt;</code> : <code>navbar-nav</code><br>
+                8. Sur chaque <code>&lt;li&gt;</code> : <code>nav-item</code><br>
+                9. Sur chaque <code>&lt;a&gt;</code> de lien : <code>nav-link</code>
+            </div>
+            
+            <!-- TODO: Ajouter toutes les classes Bootstrap nécessaires -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+                <div class="container-fluid">
+                    <a href="#" class="navbar-brand">Restaurant</a>
+                    
+                    <!-- Bouton hamburger pour mobile -->
+                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <!-- Contenu qui se cache/affiche -->
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link" href="#" >Menu</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" >Réservation</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#" >Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        
+        <!-- ========== SECTION 4 : DROPDOWN (MENU DÉROULANT) ========== -->
+        <div class="demo-section">
+            <h2 class="section-title">4. Menu Déroulant (Dropdown)</h2>
+            
+            <!-- Exercice 4.1 : Dropdown simple -->
+            <h3 class="exercise-title">Exercice 4.1 : Dropdown de base</h3>
+            <div class="todo-box">
+                <strong>TODO:</strong> Créer un menu déroulant simple<br>
+                Sur le div conteneur : <code>dropdown</code><br>
+                Sur le bouton : <code>btn btn-primary dropdown-toggle</code> + <code>data-bs-toggle="dropdown"</code><br>
+                Sur <code>&lt;ul&gt;</code> : <code>dropdown-menu</code><br>
+                Sur chaque <code>&lt;a&gt;</code> : <code>dropdown-item</code>
+            </div>
+            
+            <!-- TODO: Ajouter les classes Bootstrap appropriées -->
+            <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                    Actions
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#" class="dropdown-item">Modifier</a></li>
+                    <li><a href="#" class="dropdown-item">Supprimer</a></li>
+                    <li><a href="#" class="dropdown-item">Archiver</a></li>
+                </ul>
+            </div>
+            
+            <!-- Exercice 4.2 : Dropdown avec séparateurs -->
+            <h3 class="exercise-title">Exercice 4.2 : Dropdown avec dividers et headers</h3>
+            <div class="todo-box">
+                <strong>TODO:</strong> Ajouter des séparateurs et en-têtes<br>
+                Sur <code>&lt;h6&gt;</code> : <code>dropdown-header</code><br>
+                Sur <code>&lt;hr&gt;</code> : <code>dropdown-divider</code>
+            </div>
+            
+            <div class="spacer"></div>
+            
+            <!-- TODO: Ajouter les classes Bootstrap appropriées -->
+            <div>
+                <button type="button">
+                    Catégories
+                </button>
+                <ul>
+                    <li><h6 class="dropdown-header">Électronique</h6></li>
+                    <li><a href="#">Ordinateurs</a></li>
+                    <li><a href="#">Téléphones</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><h6 class="dropdown-header">Mode</h6></li>
+                    <li><a href="#">Vêtements</a></li>
+                    <li><a href="#">Chaussures</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- ========== SECTION 5 : DROPDOWN DANS NAVBAR ========== -->
+        <div class="demo-section">
+            <h2 class="section-title">5. Dropdown intégré dans une Navbar</h2>
+            
+            <h3 class="exercise-title">Exercice 5.1 : Navbar avec menu déroulant</h3>
+            <div class="todo-box">
+                <strong>TODO:</strong> Intégrer un dropdown dans la navbar<br>
+                Sur le <code>&lt;li&gt;</code> avec dropdown : <code>nav-item dropdown</code><br>
+                Sur le lien déclencheur : <code>nav-link dropdown-toggle</code> + <code>data-bs-toggle="dropdown"</code><br>
+                Sur <code>&lt;ul&gt;</code> du menu : <code>dropdown-menu</code><br>
+                Sur chaque option : <code>dropdown-item</code>
+            </div>
+            
+            <!-- TODO: Ajouter toutes les classes nécessaires -->
+            <nav>
+                <div>
+                    <a href="#">E-Commerce</a>
+                    <ul>
+                        <li class="nav-item dropdown"><a href="#" >Accueil</a></li>
+                        
+                        <!-- Menu déroulant -->
+                        <li>
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Produits</a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item"><a href="#">Ordinateurs</a></li>
+                                <li class="dropdown-item"><a href="#">Téléphones</a></li>
+                                <li class="dropdown-item"><a href="#">Accessoires</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        
+        <!-- ========== SECTION 6 : ALERTES ========== -->
+        <div class="demo-section">
+            <h2 class="section-title">6. Alertes (Messages)</h2>
+            
+            <!-- Exercice 6.1 : Alertes colorées -->
+            <h3 class="exercise-title">Exercice 6.1 : Différents types d'alertes</h3>
+            <div class="todo-box">
+                <strong>TODO:</strong> Créer des alertes avec différentes couleurs<br>
+                Structure : <code>alert alert-{couleur}</code><br>
+                Couleurs disponibles : <code>primary, success, danger, warning, info, light, dark</code>
+            </div>
+            
+            <!-- TODO: Ajouter class="alert alert-success" -->
+            <div class="alert alert-success">
+                <strong >Succès !</strong> Votre inscription a bien été enregistrée.
+            </div>
+            
+            <!-- TODO: Ajouter class="alert alert-danger" -->
+            <div class="alert alert-danger">
+                <strong >Erreur !</strong> Veuillez remplir tous les champs obligatoires.
+            </div>
+            
+            <!-- TODO: Ajouter class="alert alert-warning" -->
+            <div  class="alert alert-warning">
+                <strong>Attention !</strong> Cette action est irréversible.
+            </div>
+            
+            <!-- TODO: Ajouter class="alert alert-info" -->
+            <div class="alert alert-info">
+                <strong >Info :</strong> Mise à jour disponible.
+            </div>
+            
+            <!-- Exercice 6.2 : Alertes avec liens -->
+            <h3 class="exercise-title">Exercice 6.2 : Alertes avec liens stylisés</h3>
+            <div class="todo-box">
+                <strong>TODO:</strong> Ajouter des liens dans les alertes<br>
+                Sur le lien : ajouter <code>alert-link</code>
+            </div>
+            
+            <!-- TODO: Ajouter les classes appropriées -->
+            <div class="alert alert-warning alert-dismissible fade show">
+                <i class="bi bi-check-circle-fill"></i>
+                <strong>Bravo !</strong> Votre compte a été créé. 
+                <a href="#" class="alert-link">Connectez-vous maintenant</a>
+            </div>
+            
+            <!-- Exercice 6.3 : Alertes fermables -->
+            <h3 class="exercise-title">Exercice 6.3 : Alertes avec bouton de fermeture</h3>
+            <div class="todo-box">
+                <strong>TODO:</strong> Rendre l'alerte fermable<br>
+                Sur l'alerte : <code>alert alert-warning alert-dismissible fade show</code><br>
+                Sur le bouton : <code>btn-close</code> + <code>data-bs-dismiss="alert"</code>
+            </div>
+            
+            <!-- TODO: Ajouter les classes appropriées -->
+            <div class="alert alert-warning alert-dismissible fade show">
+                <strong>Cookie :</strong> Ce site utilise des cookies.
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        </div>
+        
+        <!-- ========== SECTION 7 : BADGES ========== -->
+        <div class="demo-section">
+            <h2 class="section-title">7. Badges (Insignes)</h2>
+            
+            <!-- Exercice 7.1 : Badges colorés -->
+            <h3 class="exercise-title">Exercice 7.1 : Badges avec différentes couleurs</h3>
+            <div class="todo-box">
+                <strong>TODO:</strong> Créer des badges colorés<br>
+                Structure : <code>badge bg-{couleur}</code><br>
+                Couleurs : <code>primary, secondary, success, danger, warning, info, light, dark</code><br>
+                Pour warning et info : ajouter <code>text-dark</code> pour un meilleur contraste
+            </div>
+            
+            <!-- TODO: Ajouter class="badge bg-primary" -->
+            <span class="badge bg-primary">Nouveau</span>
+            
+            <!-- TODO: Ajouter class="badge bg-success" -->
+            <span class=" badge bg-success">En stock</span>
+            
+            <!-- TODO: Ajouter class="badge bg-danger" -->
+            <span class=" badge bg-danger">Urgent</span>
+            
+            <!-- TODO: Ajouter class="badge bg-warning text-dark" -->
+            <span class="badge bg-warning text-dark">En attente</span>
+            
+            <!-- TODO: Ajouter class="badge bg-info text-dark" -->
+            <span class="badge bg-info text-dark">Information</span>
+            
+            <!-- Exercice 7.2 : Badges arrondis (pilule) -->
+            <h3 class="exercise-title">Exercice 7.2 : Badges arrondis</h3>
+            <div class="todo-box">
+                <strong>TODO:</strong> Créer des badges en forme de pilule<br>
+                Ajouter <code>rounded-pill</code> en plus de <code>badge bg-{couleur}</code>
+            </div>
+            
+            <p>
+                <!-- TODO: Ajouter class="badge bg-primary rounded-pill" -->
+                <span class="badge bg-primary rounded-pill">12</span> messages
+            </p>
+            
+            <p>
+                <!-- TODO: Ajouter class="badge bg-danger rounded-pill" -->
+                <span class=" bg-danger rounded-pill">5</span> notifications
+            </p>
+            
+            <!-- Exercice 7.3 : Badges dans des boutons -->
+            <h3 class="exercise-title">Exercice 7.3 : Badges intégrés dans des boutons</h3>
+            <div class="todo-box">
+                <strong>TODO:</strong> Ajouter des badges dans des boutons<br>
+                Sur le bouton : <code>btn btn-{couleur}</code><br>
+                Sur le badge : <code>badge bg-{couleur} rounded-pill</code>
+            </div>
+            
+            <!-- TODO: Ajouter les classes appropriées -->
+            <button type="button" class="btn btn-primary">
+                Notifications <span class="badge bg-danger rounded-pill">4</span>
+            </button>
+            
+            <!-- TODO: Ajouter les classes appropriées -->
+            <button type="button" class="btn btn-primary">
+                Panier <span class="badge bg-danger rounded-pill">7</span>
+            </button>
+        </div>
+        
+        <!-- ========== SECTION 8 : NAVBAR AVEC BADGES ========== -->
+        <div class="demo-section">
+            <h2 class="section-title">8. Navbar avec Badges (Compteurs)</h2>
+            
+            <h3 class="exercise-title">Exercice 8.1 : Navbar avec badges de notification</h3>
+            <div class="todo-box">
+                <strong>TODO:</strong> Créer une navbar avec des compteurs<br>
+                Les badges sont placés à l'intérieur des liens de navigation
+            </div>
+            
+            <!-- TODO: Ajouter toutes les classes nécessaires -->
+            <nav class=" navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a href="#" class="navbar-brand">Mon App</a>
+                    <ul class="nav ">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="bi bi-house-fill"></i> Accueil
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="bi bi-envelope-fill"></i> Messages
+                                <span class="badge bg-danger rounded-pill">5</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="bi bi-bell-fill"></i> Notifications
+                                <span class="badge bg-danger rounded-pill">12</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="bi bi-cart-fill"></i> Panier
+                                <span class="badge bg-danger rounded-pill">3</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        
+        <!-- ========== SECTION 9 : PROJET COMPLET ========== -->
+        <div class="demo-section">
+            <h2 class="section-title">9. Projet Complet : Navbar E-commerce</h2>
+            
+            <h3 class="exercise-title">Exercice 9.1 : Navbar complète combinant tout</h3>
+            <div class="todo-box">
+                <strong>TODO:</strong> Créer une navbar professionnelle avec :<br>
+                ✓ Logo et nom du site<br>
+                ✓ Bouton hamburger responsive<br>
+                ✓ Liens de navigation avec page active<br>
+                ✓ Menu déroulant "Produits" avec headers et dividers<br>
+                ✓ Badges sur "Promotions" et "Panier"<br>
+                ✓ Icônes Bootstrap Icons<br>
+                ✓ Liens alignés à droite pour notifications et connexion
+            </div>
+            
+            <!-- TODO: Compléter cette navbar avec TOUTES les classes nécessaires -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a href="#" class="navbar-brand">
+                        <i class="bi bi-shop"></i> E-Shop
+                    </a>
+                    
+                    <button type="button" class="navbar-toggle" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+                        <span class="navbar-toggler-icon" id="navbarResponsive" ></span>
+                    </button>
+                    
+                    <div class="collapse navbar-collapse " id="navbarResponsive">
+                        <!-- Liens principaux à gauche -->
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="bi bi-house-fill"></i> Accueil
+                                </a>
+                            </li>
+                            
+                            <!-- Dropdown Produits -->
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="bi bi-grid-fill"></i> Produits
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><h6 class="dropdown-header">Électronique</h6></li>
+                                    <li><a href="#" class="dropdown-item">Ordinateurs</a></li>
+                                    <li><a href="#" class="dropdown-item">Téléphones</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><h6 class="dropdown-header">Mode</h6></li>
+                                    <li><a href="#" class="dropdown-item">Vêtements</a></li>
+                                    <li><a href="#" class="dropdown-item">Chaussures</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="bi bi-tag-fill"></i> Promotions
+                                    <span class="badge bg-warning rounded-pill">HOT</span>
+                                </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="bi bi-telephone-fill"></i> Contact
+                                </a>
+                            </li>
+                        </ul>
+                        
+                        <!-- Liens utilisateur à droite -->
+                        <ul class="navbar nav">
+                            <li class="navbar-item">
+                                <a href="#" class="navbar-link">
+                                    <i class="bi bi-bell-fill"></i>
+                                    <span>8</span>
+                                </a>
+                            </li>
+                            <li class="navbar-item">
+                                <a href="#" class="navbar-link">
+                                    <i class="bi bi-cart-fill"></i> Panier
+                                    <span class="badge bg-success rounded-pill">3</span>
+                                </a>
+                            </li>
+                            <li class="navbar-item">
+                                <a href="#" class="navbar-link">
+                                    <i class="bi bi-person-circle"></i> Connexion
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        
+    </div>
+
+    <!-- Bootstrap JS -->
+     <script src="bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
