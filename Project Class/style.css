@@ -1,6 +1,6 @@
-/* html,body{
+html,body{
     overflow-x: hidden;
-} */
+}
 *{
     margin: 0;
     padding: 0;
@@ -9,10 +9,7 @@
 body{
     width: 100%;
     height: 100vh;
-    /* background-color: rgb(116, 105, 105); */
-}
-.color{
-    background-color: beige;
+    background-color: rgba(248, 248, 213, 0.986);
 }
 .Size{
     height: 400px;
@@ -22,6 +19,9 @@ body{
 .size{
     height: 300px;
     width: 300px;
+}
+.nav{
+    position: sticky;
 }
 .C1{
     background-color: rgba(248, 248, 213, 0.986);
@@ -34,6 +34,7 @@ body{
     transform: scale(1.1);
     box-shadow: 3px 1px 5px rgba(3, 5, 3, 0.685);
     z-index: 1000;
+    transform: rotateY(18deg);
 }
 .card-title{
   font-family: "Playfair", serif;
@@ -63,4 +64,21 @@ body{
 }
 .c2{
     background-color: rgba(199, 199, 158, 0.986);
+}
+.bg{
+    background-color: rgba(170, 170, 146, 0.24);
+    border: .5px solid black;
+}
+.Bg{
+    background-color: rgba(236, 236, 203, 0.24);
+    border: .5px solid black;
+}
+.star{
+    color: rgb(219, 206, 190);
+    cursor: pointer;
+}
+.morpho{
+    height: 200px;
+    width: 400px;
+    object-fit: cover;
 }
